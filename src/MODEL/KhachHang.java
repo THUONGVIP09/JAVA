@@ -7,6 +7,7 @@ public class KhachHang {
 	private int IDKhachhang;
 	private String tenkh;
 	private String diachikh;
+	private String quan;
 	private Date ngaysinh;
 	private boolean gioitinh;
 	private String sdt;
@@ -17,11 +18,13 @@ public class KhachHang {
 	}
 
 
-	public KhachHang(int iDKhachhang, String tenkh, String diachikh, Date ngaysinh, boolean gioitinh, String sdt) {
+	public KhachHang(int iDKhachhang, String tenkh, String diachikh, String quan, Date ngaysinh, boolean gioitinh,
+			String sdt) {
 		super();
 		IDKhachhang = iDKhachhang;
 		this.tenkh = tenkh;
 		this.diachikh = diachikh;
+		this.quan = quan;
 		this.ngaysinh = ngaysinh;
 		this.gioitinh = gioitinh;
 		this.sdt = sdt;
@@ -58,6 +61,16 @@ public class KhachHang {
 	}
 
 
+	public String getQuan() {
+		return quan;
+	}
+
+
+	public void setQuan(String quan) {
+		this.quan = quan;
+	}
+
+
 	public Date getNgaysinh() {
 		return ngaysinh;
 	}
@@ -90,14 +103,14 @@ public class KhachHang {
 
 	@Override
 	public String toString() {
-		return "KhachHang [IDKhachhang=" + IDKhachhang + ", tenkh=" + tenkh + ", diachikh=" + diachikh + ", ngaysinh="
-				+ ngaysinh + ", gioitinh=" + gioitinh + ", sdt=" + sdt + "]";
+		return "KhachHang [IDKhachhang=" + IDKhachhang + ", tenkh=" + tenkh + ", diachikh=" + diachikh + ", quan="
+				+ quan + ", ngaysinh=" + ngaysinh + ", gioitinh=" + gioitinh + ", sdt=" + sdt + "]";
 	}
 
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(IDKhachhang, diachikh, gioitinh, ngaysinh, sdt, tenkh);
+		return Objects.hash(IDKhachhang, diachikh, gioitinh, ngaysinh, quan, sdt, tenkh);
 	}
 
 
@@ -112,10 +125,11 @@ public class KhachHang {
 		KhachHang other = (KhachHang) obj;
 		return IDKhachhang == other.IDKhachhang && Objects.equals(diachikh, other.diachikh)
 				&& gioitinh == other.gioitinh && Objects.equals(ngaysinh, other.ngaysinh)
-				&& Objects.equals(sdt, other.sdt) && Objects.equals(tenkh, other.tenkh);
+				&& Objects.equals(quan, other.quan) && Objects.equals(sdt, other.sdt)
+				&& Objects.equals(tenkh, other.tenkh);
 	}
-	
-	
+
+
 	
 	
 

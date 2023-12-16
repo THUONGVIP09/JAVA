@@ -42,6 +42,7 @@ public class QLKH extends JFrame {
 	private final JTable table = new JTable();
 	private JTable table_1;
 	private JTextField textField_1;
+	private JTextField textField_4;
 
 	/**
 	 * Launch the application.
@@ -159,17 +160,9 @@ public class QLKH extends JFrame {
 		lblNewLabel_7.setFont(new Font("UTM Facebook", Font.PLAIN, 14));
 		panel_1.add(lblNewLabel_7);
 		
-		JPanel panel_5 = new JPanel();
-		panel_1.add(panel_5);
-		
-		JComboBox comboBox_1 = new JComboBox();
-		panel_5.add(comboBox_1);
-		
-		JComboBox comboBox_2 = new JComboBox();
-		panel_5.add(comboBox_2);
-		
-		JComboBox comboBox_3 = new JComboBox();
-		panel_5.add(comboBox_3);
+		textField_4 = new JTextField();
+		panel_1.add(textField_4);
+		textField_4.setColumns(10);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(new Color(255, 255, 128));

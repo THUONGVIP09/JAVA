@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 public class ADMIN {
 	private ArrayList<KhachHang> dsKhachHang;
+	private String luachon;
 	
 	public ADMIN() {
 		this.dsKhachHang=new ArrayList<KhachHang>();
+		this.luachon="";
 	}
 
 	public ADMIN(ArrayList<KhachHang> dsKhachHang) {
@@ -31,6 +33,14 @@ public class ADMIN {
 	public void update(KhachHang khachhang) {
 		this.dsKhachHang.remove(khachhang);
 		this.dsKhachHang.add(khachhang);
+	}
+
+	public String getLuachon() {
+		return luachon;
+	}
+
+	public void setLuachon(String luachon) {
+		this.luachon = luachon;
 	}
 	
 	

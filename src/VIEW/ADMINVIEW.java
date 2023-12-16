@@ -37,13 +37,16 @@ import CONTROLER.ADMINCONTRLER;
 
 public class ADMINVIEW extends JFrame {
 	private static final long serialVersionUID = 1L;
-	ADMIN adminmodel;
-	private JTextField textField;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	public ADMIN adminmodel;
+	public JTextField textField;
+	public JTextField textField_2;
+	public JTextField textField_3;
 	
-	private JTable table_1;
-	private JTextField textField_1;
+	public JTable table_1;
+	public JTextField textField_1;
+	public JComboBox comboBox;
+	public ButtonGroup gt;
+	public JTextField textField_4;
 
 	/**
 	 * Launch the application.
@@ -130,7 +133,7 @@ public class ADMINVIEW extends JFrame {
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_3);
 		
-		JComboBox comboBox = new JComboBox();
+		 comboBox = new JComboBox();
 		comboBox.addItem("Quận Cẩm Lệ");
 		comboBox.addItem("Quận Hải Châu");
 		comboBox.addItem("Quận Liên Chiểu");
@@ -165,7 +168,7 @@ public class ADMINVIEW extends JFrame {
 		
 		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Nữ");
 		panel_4.add(rdbtnNewRadioButton_1);
-		ButtonGroup gt=new ButtonGroup();
+		 gt=new ButtonGroup();
 		gt.add(rdbtnNewRadioButton);
 		gt.add(rdbtnNewRadioButton_1);
 		
@@ -175,26 +178,9 @@ public class ADMINVIEW extends JFrame {
 		lblNewLabel_7.setFont(new Font("UTM Facebook", Font.PLAIN, 14));
 		panel_1.add(lblNewLabel_7);
 		
-		JPanel panel_5 = new JPanel();
-		panel_1.add(panel_5);
-		
-		JComboBox comboBox_1 = new JComboBox();
-		for(int i=1;i<=31;i++) {
-			comboBox_1.addItem(i);
-		}
-		panel_5.add(comboBox_1);
-		
-		JComboBox comboBox_2 = new JComboBox();
-		for(int i=1;i<=12;i++) {
-			comboBox_2.addItem(i);
-		}
-		panel_5.add(comboBox_2);
-		
-		JComboBox comboBox_3 = new JComboBox();
-		panel_5.add(comboBox_3);
-		for(int i=1990;i<=2023;i++) {
-			comboBox_3.addItem(i);
-		}
+		textField_4 = new JTextField();
+		panel_1.add(textField_4);
+		textField_4.setColumns(10);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(new Color(255, 255, 128));
@@ -283,6 +269,22 @@ public class ADMINVIEW extends JFrame {
 		
 		
 		this.setVisible(true);
+		
+	}
+
+	public void xoaForm() {
+		textField.setText("");
+		textField_1.setText("");
+		textField_2.setText("");
+		textField_3.setText("");
+		textField_4.setText("");
+		comboBox.setSelectedIndex(-1);
+		gt.clearSelection();
+		
+	
+		
+		
+		
 		
 	}
 }
