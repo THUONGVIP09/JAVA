@@ -5,8 +5,13 @@ import java.util.ArrayList;
 import Dao.khachhangdao;
 
 public class ADMIN {
+<<<<<<< HEAD
 	public ArrayList<KhachHang> dsKhachHang;
 	public String luachon;
+=======
+	private ArrayList<KhachHang> dsKhachHang;
+	private String luachon;
+>>>>>>> a8277629b14a84529be8e13658e48cdfdfbbcdb0
 	
 	public ADMIN() {
 		this.dsKhachHang=new ArrayList<KhachHang>();
@@ -44,6 +49,7 @@ public class ADMIN {
 	public void setLuachon(String luachon) {
 		this.luachon = luachon;
 	}
+<<<<<<< HEAD
 
 	public boolean kiemtratontai(KhachHang kh) {
 		for(KhachHang khachHang:khachhangdao.getInstace().selectAll()) {
@@ -52,6 +58,8 @@ public class ADMIN {
 		}
 		return false;
 	}
+=======
+>>>>>>> a8277629b14a84529be8e13658e48cdfdfbbcdb0
 	
 	
 

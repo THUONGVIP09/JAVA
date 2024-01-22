@@ -18,7 +18,12 @@ public class KhachHang {
 	}
 
 
+<<<<<<< HEAD
 	public KhachHang(int iDKhachhang, String tenkh, String diachikh, String quan, Date ngaysinh, boolean gioitinh,String sdt) {
+=======
+	public KhachHang(int iDKhachhang, String tenkh, String diachikh, String quan, Date ngaysinh, boolean gioitinh,
+			String sdt) {
+>>>>>>> a8277629b14a84529be8e13658e48cdfdfbbcdb0
 		super();
 		IDKhachhang = iDKhachhang;
 		this.tenkh = tenkh;
